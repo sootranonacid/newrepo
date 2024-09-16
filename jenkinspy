@@ -20,7 +20,7 @@ pipeline {
     }
 
     triggers {
-        // Schedule the job to run every 2 minutes
+        // Schedule the job to run every 60 minutes
         cron('H/60 * * * *')
     }
 }
