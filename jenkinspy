@@ -11,7 +11,7 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 // Ensure Python is available in the environment
-                sh 'python3 --version'
+                //sh 'python3 --version'
                 
                 // Run the Python script
                 sh 'python3 hello.py'
