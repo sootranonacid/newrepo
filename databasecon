@@ -14,7 +14,7 @@ pipeline {
                 //sh 'python3 --version'
                 
                 // Run the Python script
-                sh 'python3 hello.py'
+                sh 'python3 testconnection.py.py'
             }
         }
     }
