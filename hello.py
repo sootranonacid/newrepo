@@ -3,6 +3,8 @@
 def main():
     print("Hello, World!")
     print("hello again")
+    print("Hello, World!")
+    print("hello again")
 
 if __name__ == "__main__":
     main()
