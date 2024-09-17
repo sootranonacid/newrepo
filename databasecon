@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Clone the GitHub repository
+                git branch: 'main', credentialsId: 'gittoken1', url: 'https://github.com/sootranonacid/newrepo.git'
+            }
+        }
+        stage('Run Python Script') {
+            steps {
+                // Ensure Python is available in the environment
+                //sh 'python3 --version'
+                
+                // Run the Python script
+                sh 'python3 hello.py'
+            }
+        }
+    }
+
+    
+}
