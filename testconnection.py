@@ -19,7 +19,7 @@ def test_connection():
         employee_name = "Khaled"
 
         # Execute a query to fetch the salary of the employee named "Khaled"
-        cursor.execute("SELECT salary FROM employees WHERE name = %s", ("khaled",))
+        cursor.execute("SELECT salary FROM employees WHERE name = %s", ("fahad",))
 
         # Fetch the result (assumes only one result is returned)
         result = cursor.fetchone()
