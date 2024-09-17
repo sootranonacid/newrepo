@@ -16,10 +16,10 @@ def test_connection():
         cursor = conn.cursor()
 
         # Define the employee name
-        employee_name = "Khaled"
+        employee_name = "fahad"
 
         # Execute a query to fetch the salary of the employee named "Khaled"
-        cursor.execute("SELECT salary FROM employees WHERE name = %s", ("fahad",))
+        cursor.execute("SELECT salary FROM employees WHERE name = %s", (employee_name,))
 
         # Fetch the result (assumes only one result is returned)
         result = cursor.fetchone()
