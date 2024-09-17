@@ -8,6 +8,11 @@ pipeline {
                 git branch: 'main', credentialsId: 'gittoken1', url: 'https://github.com/sootranonacid/newrepo.git'
             }
         }
+
+ stage('Install Dependencies') {
+            steps {
+                sh 'pip3 install psycopg2-binary'
+            }
         stage('Run Python Script') {
             steps {
                 // Ensure Python is available in the environment
