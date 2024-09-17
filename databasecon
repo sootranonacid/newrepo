@@ -9,20 +9,18 @@ pipeline {
             }
         }
 
- stage('Install Dependencies') {
+        stage('Install Dependencies') {
             steps {
+                // Install the necessary Python packages
                 sh 'pip3 install psycopg2-binary'
             }
+        }
+
         stage('Run Python Script') {
             steps {
-                // Ensure Python is available in the environment
-                //sh 'python3 --version'
-                
                 // Run the Python script
                 sh 'python3 testconnection.py'
             }
         }
     }
-
-    
 }
